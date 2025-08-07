@@ -27,7 +27,7 @@ jobs:
       - name: put index.html
         run: |
           if [ -z "$(ls -A /var/www/html/)"]; then
-            sudo mv * /va/r/www/html/
+            sudo mv * /var/www/html/
           else
             sudo rm /var/www/html/*
             sudo mv * /var/www/html/
