@@ -1,0 +1,34 @@
+name: nginx delpoyment on self-hosted runner
+
+on:
+  push:
+    branches:
+      - main
+  
+  workflow_dispatch:
+
+jobs:
+  nginx:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: install nginx 
+        run: |
+          sudo apt update
+          sudo apt install -y nginx
+      
+      - name: start nginx
+        run: |
+          sudo systemctl start nginx
+          sudo systemctl enable nginx
+      
+      - name: put index.html
+        run: |
+          sudo rm /var/www/html/*
+          mv * /var/www/html/
+      
+      - name: check file is working or not 
+        run: | 
+          curl --head http://localhost/index.html | grep "200 OK"

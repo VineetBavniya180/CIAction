@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samurai Cat Character</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffccdd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+    p {
+      color: #555;
+    }
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff3366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .btn:hover {
+      background-color: #e02d5d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="9500_5_2_09.jpg" alt="Samurai Cat Character" />
+    <h1>Samurai Cat</h1>
+    <p>A fierce and honorable warrior with a mysterious mask and a vibrant katana. This character blends tradition and tech with grace.</p>
+    <button class="btn">Join the Clan</button>
+  </div>
+</body>
+</html>
+<script>
+  document.querySelector('.btn').addEventListener('click', function() {
+    alert('Welcome to the Samurai Cat Clan!');
+  }); 
+</script>   
