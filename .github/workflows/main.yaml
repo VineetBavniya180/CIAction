@@ -27,7 +27,7 @@ jobs:
       - name: put index.html
         run: |
           sudo rm /var/www/html/*
-          mv * /var/www/html/
+          sudo mv * /var/www/html/
       
       - name: check file is working or not 
         run: | 
