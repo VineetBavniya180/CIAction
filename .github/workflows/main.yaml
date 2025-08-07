@@ -26,8 +26,12 @@ jobs:
       
       - name: put index.html
         run: |
-          sudo rm /var/www/html/*
-          sudo mv * /var/www/html/
+          if [ -z "$(ls -A /var/www/html/)"]; then
+            sudo mv * /va/r/www/html/
+          else
+            sudo rm /var/www/html/*
+            sudo mv * /var/www/html/
+          fi
       
       - name: check file is working or not 
         run: | 
